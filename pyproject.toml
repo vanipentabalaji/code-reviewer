@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-reviewer"
+version = "1.0.0"
+description = "AI powered code reviewer using Gemini and MCP"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp",
+    "google-genai",
+    "rich",
+    "python-dotenv",
+]
+
+[project.scripts]
+code-reviewer = "cli:main"
+
+[tool.setuptools]
+py-modules = ["cli", "client", "server"]
